@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ocn-oO-uWh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Producto-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoAplicacion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0h-4l-WR6">
+                                <rect key="frame" x="20" y="108" width="123" height="155"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="thS-Md-PEv"/>
+                                    <constraint firstAttribute="height" constant="155" id="xyW-c7-ZfK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label Label " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqC-Tj-968">
+                                <rect key="frame" x="153" y="108" width="251" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0as-rC-dMd">
+                                <rect key="frame" x="20" y="279" width="141" height="30"/>
+                                <state key="normal" title="Ver más información"/>
+                                <connections>
+                                    <segue destination="PBF-Fm-xOZ" kind="show" id="aMu-Fa-GMM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-jQ-cEa">
+                                <rect key="frame" x="20" y="323" width="180" height="30"/>
+                                <state key="normal" title="TODOS LOS PRODUCTOS"/>
+                                <connections>
+                                    <segue destination="aqF-0z-4aI" kind="show" id="p1c-8Z-tLv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0as-rC-dMd" firstAttribute="leading" secondItem="N0h-4l-WR6" secondAttribute="leading" id="0br-Mg-03r"/>
+                            <constraint firstItem="iIb-jQ-cEa" firstAttribute="top" secondItem="0as-rC-dMd" secondAttribute="bottom" constant="14" id="By1-sq-7Np"/>
+                            <constraint firstItem="BqC-Tj-968" firstAttribute="top" secondItem="N0h-4l-WR6" secondAttribute="top" id="E6u-5b-50f"/>
+                            <constraint firstItem="BqC-Tj-968" firstAttribute="leading" secondItem="N0h-4l-WR6" secondAttribute="trailing" constant="10" id="Nd7-1H-Xpb"/>
+                            <constraint firstItem="0as-rC-dMd" firstAttribute="top" secondItem="N0h-4l-WR6" secondAttribute="bottom" constant="16" id="SZ0-mK-bXT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BqC-Tj-968" secondAttribute="trailing" constant="10" id="Ty5-09-Ye4"/>
+                            <constraint firstItem="N0h-4l-WR6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ba2-aE-2x9"/>
+                            <constraint firstItem="iIb-jQ-cEa" firstAttribute="leading" secondItem="0as-rC-dMd" secondAttribute="leading" id="o8l-bl-5aF"/>
+                            <constraint firstItem="N0h-4l-WR6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ry0-gF-bjL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Producto" id="xmz-om-3Kd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060.8695652173915" y="133.92857142857142"/>
+        </scene>
+        <!--TODOS LOS PRODUCTOS-->
+        <scene sceneID="wWM-QK-4dA">
+            <objects>
+                <viewController id="aqF-0z-4aI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fcJ-m9-xwX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Wj2-YT-Vuy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TODOS LOS PRODUCTOS" id="z3u-3g-VtW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaX-xw-68s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="488"/>
+        </scene>
+        <!--Detalle-->
+        <scene sceneID="eqs-21-aLF">
+            <objects>
+                <viewController id="PBF-Fm-xOZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q5Z-sf-fQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fmn-8r-LvS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detalle" id="sGm-Ci-h6Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNn-TB-TH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="-153"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NOG-Qq-fyu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ocn-oO-uWh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xA9-W6-277">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="b7D-1Q-70K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xC-iy-NyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.72463768115944" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
