@@ -1,0 +1,24 @@
+PODS:
+  - GoogleMaps (4.0.0):
+    - GoogleMaps/Maps (= 4.0.0)
+  - GoogleMaps/Base (4.0.0)
+  - GoogleMaps/Maps (4.0.0):
+    - GoogleMaps/Base
+  - YouTubePlayer-Swift (1.0)
+
+DEPENDENCIES:
+  - GoogleMaps (= 4.0.0)
+  - YouTubePlayer-Swift
+
+SPEC REPOS:
+  trunk:
+    - GoogleMaps
+    - YouTubePlayer-Swift
+
+SPEC CHECKSUMS:
+  GoogleMaps: b7f7fc569a9b354a3af0d9729dbec40957b7d41e
+  YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
+
+PODFILE CHECKSUM: a46b9593114bf1fb7b664587f208352381743fa6
+
+COCOAPODS: 1.10.0
