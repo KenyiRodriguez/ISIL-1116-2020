@@ -8,40 +8,39 @@
 
 import UIKit
 
+protocol PlaceTableViewCellDelegate {
+    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace place: PlaceBE)
+}
+
 class PlaceTableViewCell: UITableViewCell {
     
     @IBOutlet weak private var imgPlace     : UIImageView!
     @IBOutlet weak private var lblName      : UILabel!
     @IBOutlet weak private var lblAddress   : UILabel!
+    @IBOutlet weak private var btnDelete    : UIButton!
+    
+    var delegate: PlaceTableViewCellDelegate?
     
     public var objPlace: PlaceBE! {
         didSet {
             self.updateData()
         }
     }
-    
+        
+    @IBAction func clickBtnDelete(_ sender: Any) {
+        self.delegate?.placeTableViewCell(self, deletePlace: self.objPlace)
+    }
     
     private func updateData() {
         
         self.lblName.text       = self.objPlace.place_name
         self.lblAddress.text    = self.objPlace.place_address
         
-        self.imgPlace.downloadImageInURLString(self.objPlace.place_urlImage) { (image, urlString) in
+        let placeholderImage = UIImage(named: "place_placeholder")
+        self.imgPlace.downloadImageInURLString(self.objPlace.place_urlImage, placeHolderImage: placeholderImage) { (image, urlString) in
             
             if self.objPlace.place_urlImage == urlString {
-                
                 self.imgPlace.image = image
-                
-                if let imageSize = image?.size {
-
-                    let imageViewRatio = self.imgPlace.frame.height / self.imgPlace.frame.width
-                    let imageRatio = imageSize.height / imageSize.width
-                    
-                    print("RatioImagen: \(imageViewRatio)")
-                    print(imageRatio)
-                    
-                    self.imgPlace.contentMode = imageRatio > imageViewRatio ? .scaleAspectFit : .scaleAspectFill
-                }
             }
         }
     }
@@ -49,14 +48,9 @@ class PlaceTableViewCell: UITableViewCell {
     override func draw(_ rect: CGRect) {
         
         self.imgPlace.layer.cornerRadius = 20
+        self.btnDelete.layer.shadowColor = UIColor.black.cgColor
+        self.btnDelete.layer.shadowOffset = .zero
+        self.btnDelete.layer.shadowRadius = 4
+        self.btnDelete.layer.shadowOpacity = 0.5
     }
 }
-
-/*
- 
- A
- B
- C
- D
- 
- */

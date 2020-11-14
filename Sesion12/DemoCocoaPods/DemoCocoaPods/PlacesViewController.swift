@@ -11,6 +11,8 @@ import CoreLocation
 
 class PlacesViewController: UIViewController {
     
+    @IBOutlet weak var tblPlaces: UITableView!
+    
     var arrayPlaces = [PlaceBE]()
     
     override func viewDidLoad() {
@@ -32,12 +34,48 @@ class PlacesViewController: UIViewController {
                                         urlImage: "https://isil.pe/wp-content/uploads/2018/12/home-bg-isil.jpg"))
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let indexSet = IndexSet(integer: 0)
+        self.tblPlaces.reloadSections(indexSet, with: .fade)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let controller = segue.destination as? MapViewController {
             controller.objPlace = sender as? PlaceBE
+            
+        }else if let controller = segue.destination as? RegisterPlaceViewController {
+            controller.delegate = self
         }
+    }
+}
+
+extension PlacesViewController: RegisterPlaceViewControllerDelegate {
+    
+    func registerPlaceViewController(_ controller: RegisterPlaceViewController, didRegisterPlace place: PlaceBE) {
+        self.arrayPlaces.insert(place, at: 0)
+    }
+}
+
+extension PlacesViewController: PlaceTableViewCellDelegate {
+    
+    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace place: PlaceBE) {
+        
+        self.showAlertWithTitle("Eliminar", message: "¿Deseas eliminar este lugar?", acceptButton: "Aceptar", cancelButton: "Cancelar", acceptHandler: {
+            
+            let index = self.arrayPlaces.firstIndex(where: {
+                $0.place_coordinate.latitude == place.place_coordinate.latitude && $0.place_coordinate.longitude == place.place_coordinate.longitude
+            })
+            
+            guard let indexObject = index else { return }
+            let indexPath = IndexPath(row: indexObject, section: 0)
+            
+            self.arrayPlaces.remove(at: indexPath.row)
+            self.tblPlaces.deleteRows(at: [indexPath], with: .right)
+            
+        }, cancelHandler: nil)
     }
 }
 
@@ -58,6 +96,7 @@ extension PlacesViewController: UITableViewDataSource { //Tiene 3 metodos princi
         let cellIdentifier = "PlaceTableViewCell" //Debe coincidir con el nombre del storyboard y es KeySensitive
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PlaceTableViewCell
+        cell.delegate = self
         cell.objPlace = self.arrayPlaces[indexPath.row]
         
         return cell
@@ -73,49 +112,22 @@ extension PlacesViewController: UITableViewDelegate {
         let objPlace = self.arrayPlaces[indexPath.row]
         self.performSegue(withIdentifier: "MapViewController", sender: objPlace)
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Eliminar") { (_, _, _) in
+            
+            self.arrayPlaces.remove(at: indexPath.row)
+            self.tblPlaces.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        let seeAction = UIContextualAction(style: .normal, title: "Ver Mapa") { (_, _, _) in
+            
+            let objPlace = self.arrayPlaces[indexPath.row]
+            self.performSegue(withIdentifier: "MapViewController", sender: objPlace)
+        }
+        
+        let swipeActionsConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, seeAction])
+        return swipeActionsConfiguration
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//var arrayMarcasAutos = [
-//    ["S3", "R8", "RS5", "TT RS"], //Audi
-//    ["A45", "C63 AMG", "C250", "SLX300"], //Meche
-//    ["M5", "Z4", "118i", "M2"] //BMW
-//]
-
-////Sirve para construir el contenido de la tabla
-//extension PlacesViewController: UITableViewDataSource { //Tiene 3 metodos principales: number, number, cellFor
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return self.arrayMarcasAutos.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//        let arrayModelBrand = self.arrayMarcasAutos[section]
-//        return arrayModelBrand.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//
-//}

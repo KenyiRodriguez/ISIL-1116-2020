@@ -11,13 +11,16 @@
 		FB521E0C254CEAC000DD9C6B /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB521E0B254CEAC000DD9C6B /* PlacesViewController.swift */; };
 		FB521E0E254CFA6900DD9C6B /* PlaceBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB521E0D254CFA6900DD9C6B /* PlaceBE.swift */; };
 		FB521E10254CFB4900DD9C6B /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB521E0F254CFB4900DD9C6B /* PlaceTableViewCell.swift */; };
-		FB72AF98255634A2007E395D /* DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72AF97255634A2007E395D /* DownloadImage.swift */; };
 		FB8AA45E2543AECB00B81D56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8AA45D2543AECB00B81D56 /* AppDelegate.swift */; };
 		FB8AA4602543AECB00B81D56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8AA45F2543AECB00B81D56 /* SceneDelegate.swift */; };
 		FB8AA4622543AECB00B81D56 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8AA4612543AECB00B81D56 /* MapViewController.swift */; };
 		FB8AA4652543AECB00B81D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8AA4632543AECB00B81D56 /* Main.storyboard */; };
 		FB8AA4672543AECF00B81D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8AA4662543AECF00B81D56 /* Assets.xcassets */; };
 		FB8AA46A2543AECF00B81D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8AA4682543AECF00B81D56 /* LaunchScreen.storyboard */; };
+		FBD196EA255F5AC7000E0375 /* DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD196E9255F5AC7000E0375 /* DownloadImage.swift */; };
+		FBD196EC255F5B0A000E0375 /* RegisterPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD196EB255F5B0A000E0375 /* RegisterPlaceViewController.swift */; };
+		FBD196EE255F6FE2000E0375 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD196ED255F6FE2000E0375 /* AlertManager.swift */; };
+		FBD196F0255F755B000E0375 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBD196EF255F755B000E0375 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,6 @@
 		FB521E0B254CEAC000DD9C6B /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		FB521E0D254CFA6900DD9C6B /* PlaceBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceBE.swift; sourceTree = "<group>"; };
 		FB521E0F254CFB4900DD9C6B /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
-		FB72AF97255634A2007E395D /* DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadImage.swift; path = ../../DescargaDeImagenes/DescargaDeImagenes/DownloadImage.swift; sourceTree = "<group>"; };
 		FB8AA45A2543AECB00B81D56 /* DemoCocoaPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoCocoaPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8AA45D2543AECB00B81D56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB8AA45F2543AECB00B81D56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		FB8AA4662543AECF00B81D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB8AA4692543AECF00B81D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB8AA46B2543AECF00B81D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBD196E9255F5AC7000E0375 /* DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadImage.swift; path = ../../../Sesion11/DescargaDeImagenes/DescargaDeImagenes/DownloadImage.swift; sourceTree = "<group>"; };
+		FBD196EB255F5B0A000E0375 /* RegisterPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlaceViewController.swift; sourceTree = "<group>"; };
+		FBD196ED255F6FE2000E0375 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		FBD196EF255F755B000E0375 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +98,16 @@
 				FB8AA45F2543AECB00B81D56 /* SceneDelegate.swift */,
 				FB8AA4612543AECB00B81D56 /* MapViewController.swift */,
 				FB8AA4632543AECB00B81D56 /* Main.storyboard */,
+				FBD196EF255F755B000E0375 /* Images.xcassets */,
 				FB8AA4662543AECF00B81D56 /* Assets.xcassets */,
 				FB8AA4682543AECF00B81D56 /* LaunchScreen.storyboard */,
 				FB8AA46B2543AECF00B81D56 /* Info.plist */,
 				FB521E0D254CFA6900DD9C6B /* PlaceBE.swift */,
 				FB521E0B254CEAC000DD9C6B /* PlacesViewController.swift */,
 				FB521E0F254CFB4900DD9C6B /* PlaceTableViewCell.swift */,
-				FB72AF97255634A2007E395D /* DownloadImage.swift */,
+				FBD196E9255F5AC7000E0375 /* DownloadImage.swift */,
+				FBD196EB255F5B0A000E0375 /* RegisterPlaceViewController.swift */,
+				FBD196ED255F6FE2000E0375 /* AlertManager.swift */,
 			);
 			path = DemoCocoaPods;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8AA46A2543AECF00B81D56 /* LaunchScreen.storyboard in Resources */,
+				FBD196F0255F755B000E0375 /* Images.xcassets in Resources */,
 				FB8AA4672543AECF00B81D56 /* Assets.xcassets in Resources */,
 				FB8AA4652543AECB00B81D56 /* Main.storyboard in Resources */,
 			);
@@ -220,11 +230,13 @@
 			files = (
 				FB521E0C254CEAC000DD9C6B /* PlacesViewController.swift in Sources */,
 				FB8AA4622543AECB00B81D56 /* MapViewController.swift in Sources */,
-				FB72AF98255634A2007E395D /* DownloadImage.swift in Sources */,
+				FBD196EA255F5AC7000E0375 /* DownloadImage.swift in Sources */,
 				FB8AA45E2543AECB00B81D56 /* AppDelegate.swift in Sources */,
 				FB521E0E254CFA6900DD9C6B /* PlaceBE.swift in Sources */,
 				FB8AA4602543AECB00B81D56 /* SceneDelegate.swift in Sources */,
 				FB521E10254CFB4900DD9C6B /* PlaceTableViewCell.swift in Sources */,
+				FBD196EC255F5B0A000E0375 /* RegisterPlaceViewController.swift in Sources */,
+				FBD196EE255F6FE2000E0375 /* AlertManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
