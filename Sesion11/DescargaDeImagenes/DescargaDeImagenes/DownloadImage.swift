@@ -8,10 +8,14 @@
 
 import UIKit
 
+typealias DownloadImage = (_ image: UIImage?, _ urlImage: String) -> Void
+
 extension UIImageView {
     
-    func downloadImageInURLString(_ urlString: String) {
+    func downloadImageInURLString(_ urlString: String, placeHolderImage: UIImage?, success: @escaping DownloadImage) {
     
+        self.image = placeHolderImage
+        
         guard let urlImage = URL(string: urlString) else {
             print("La url no es válida")
             return
@@ -27,10 +31,12 @@ extension UIImageView {
                 print("Se produjo un error")
             }
             
-            let imagenDownloaded = UIImage(data: imageData)
+            guard let imageDataSaved = imageData else { return }
+            
+            let imagenDownloaded = UIImage(data: imageDataSaved)
             
             DispatchQueue.main.async {
-                self.image = imagenDownloaded
+                success(imagenDownloaded, urlString)
             }
         }
     }
