@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias DownloadImage = (_ image: UIImage?, _ urlImage: String) -> Void
-
 extension UIImageView {
+    
+    typealias DownloadImage = (_ image: UIImage?, _ urlImage: String) -> Void
     
     func downloadImageInURLString(_ urlString: String, placeHolderImage: UIImage?, success: @escaping DownloadImage) {
     
